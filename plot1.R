@@ -10,6 +10,7 @@ colnames(df) = c("Date","Time","Global_active_power","Global_reactive_power","Vo
 df$Date = as.character.Date(df$Date)
 df$Date = as.Date(df$Date, format="%d/%m/%Y")
 # Build histogram from data frame
+par(bg=NA)
 hist(df$Global_active_power,col="red",main="Global Active Power", ylab = "Frequency", xlab = "Global Active Power (kilowatts)")
 # Copy the plot to a png file
 dev.copy(png, file="plot1.png", height=480, width=480, units="px")

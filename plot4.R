@@ -13,7 +13,7 @@ df$Time = paste(df$Date,df$Time)
 df$Time = as.POSIXlt(df$Time)
 # Build the plot from data frame
 par(bg=NA,mfcol=c(2,2))
-plot(df$Time,df$Global_active_power,type="l",lwd=1,xlab="Time", ylab="Global Active Power")
+plot(df$Time,df$Global_active_power,type="l",lwd=1,xlab="", ylab="Global Active Power")
 plot(df$Time,df$Sub_metering_1,type="l",lwd=1, xlab="", ylab="Energy sub metering",col="black")
 lines(df$Time,df$Sub_metering_2,type="l",lty=1,col="red")
 lines(df$Time,df$Sub_metering_3,type="l",lty=1,col="blue")
